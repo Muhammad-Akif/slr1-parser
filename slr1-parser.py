@@ -78,3 +78,13 @@ while headerFlag < len(tokenized_input):
         push_symbol = allGrammers[temp][0]
         temp_grammar = allGrammers[temp][-1]
         len_grammar = len(temp_grammar.split())
+        
+         for i in range(len_grammar * 2):
+            stack.pop()
+        stack.append(push_symbol)
+        print(f"\n{char} => Push Action {stack}")
+        temp_rowIndex = all_states.index(stack[-2])
+        temp_columnIndex = table[0].index(stack[-1])
+        temp_stateAcc = table[temp_rowIndex][temp_columnIndex]
+        stack.append(temp_stateAcc)
+        print(f"\n{temp_stateAcc} => Push Action {stack}")
