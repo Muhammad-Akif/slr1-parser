@@ -26,3 +26,17 @@ for line in data_input_lines:
             tokenized_input.append(token)
 tokenized_input.extend('$')
 print("\nTokenized input : ", tokenized_input)
+
+# ------------------------------productions---------------------------------------------------------------------
+
+file = open("grammar.txt", "r")  # grammar
+productions_array = file.readlines()
+productions = []
+for i in productions_array:
+    key, value = i.split('->')
+    newVal = value.rstrip().lstrip()
+    newKey = key.strip()
+    newArr = [newKey,newVal]
+    productions.append(newArr)
+
+# print('\nProduction ===> ', productions)
