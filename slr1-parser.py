@@ -88,3 +88,9 @@ while headerFlag < len(tokenized_input):
         temp_stateAcc = table[temp_rowIndex][temp_columnIndex]
         stack.append(temp_stateAcc)
         print(f"\n{temp_stateAcc} => Push Action {stack}")
+
+# ------------------------------Failed---------------------------------------------------------------------
+    
+    elif stateAcc == "-":
+        print("\n Parsing Failed")
+        break
