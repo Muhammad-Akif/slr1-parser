@@ -69,6 +69,7 @@ while headerFlag < len(tokenized_input):
         stack.append(temp)
         print(f"\n{temp} => Push Action {stack}")
 
+
 # ------------------------------Reductionn---------------------------------------------------------------------
 
     elif stateAcc.startswith("r"):
@@ -78,8 +79,8 @@ while headerFlag < len(tokenized_input):
         push_symbol = allGrammers[temp][0]
         temp_grammar = allGrammers[temp][-1]
         len_grammar = len(temp_grammar.split())
-        
-         for i in range(len_grammar * 2):
+            
+        for i in range(len_grammar * 2):
             stack.pop()
         stack.append(push_symbol)
         print(f"\n{char} => Push Action {stack}")
@@ -89,6 +90,7 @@ while headerFlag < len(tokenized_input):
         stack.append(temp_stateAcc)
         print(f"\n{temp_stateAcc} => Push Action {stack}")
 
+        
 # ------------------------------Failed---------------------------------------------------------------------
     
     elif stateAcc == "-":
