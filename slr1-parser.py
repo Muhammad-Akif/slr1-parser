@@ -10,3 +10,19 @@ input_headers = table[0]    #columns
 
 all_states = [i[0] for i in table]   #rows
 # print("\nall_State ==> ", all_states)
+
+# ------------------------------input & Tokenization---------------------------------------------------------------------
+
+f_input = open('input.txt', 'r') 
+tokenized_input = []
+i = f_input.read()
+data_input_lines = i.split('\n')
+
+for line in data_input_lines:
+    tokens = line.split(' ')
+    for token in tokens:
+        if token in input_headers:
+            # identifiers
+            tokenized_input.append(token)
+tokenized_input.extend('$')
+print("\nTokenized input : ", tokenized_input)
