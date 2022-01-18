@@ -40,3 +40,20 @@ for i in productions_array:
     productions.append(newArr)
 
 # print('\nProduction ===> ', productions)
+
+# ------------------------------Logic---------------------------------------------------------------------
+
+stack = ["$","0"]
+headerFlag = 0
+
+while headerFlag < len(tokenized_input):
+    char = tokenized_input[headerFlag]
+    stackindex = stack[-1]
+    rowIndex = all_states.index(stackindex)
+    columnIndex = table[0].index(char)
+    stateAcc = table[rowIndex][columnIndex]
+    # print("------>", stateAcc)
+
+    if stateAcc == "acc":
+        print("\n!!Parsing Succesfull!!!")
+        break
