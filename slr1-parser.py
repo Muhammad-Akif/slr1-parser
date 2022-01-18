@@ -57,3 +57,14 @@ while headerFlag < len(tokenized_input):
     if stateAcc == "acc":
         print("\n!!Parsing Succesfull!!!")
         break
+
+# ------------------------------Shift---------------------------------------------------------------------
+
+    elif stateAcc.startswith("s"):
+        print("\n-----------Shif------------")
+        stack.append(char)
+        print(f"\n{char} => Push Action {stack}")
+        headerFlag += 1
+        temp = stateAcc[1:]
+        stack.append(temp)
+        print(f"\n{temp} => Push Action {stack}")
