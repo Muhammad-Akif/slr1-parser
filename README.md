@@ -8,3 +8,5 @@ including operations like:
   - Shift Operation with terminals and non terminals.
   - Reduce Operation with terminals and non terminals.
   - accept and failure Operations.
+
+for execution only python is required in your system ... 
