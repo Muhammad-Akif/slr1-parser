@@ -94,3 +94,13 @@ while headerFlag < len(tokenized_input):
     elif stateAcc == "-":
         print("\n Parsing Failed")
         break
+
+# ------------------------------Non terminals Shift---------------------------------------------------------------------
+
+    else :
+        print("\n-----------Simple Shift------------")
+        headerFlag += 1
+        stack.append(char)
+        print(f"\n{char} => Push Action {stack}")
+        stack.append(stateAcc)
+        print(f"\n{stateAcc} => Push Action {stack}")
