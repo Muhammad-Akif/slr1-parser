@@ -5,3 +5,6 @@ including operations like:
   - dynamic user input reading
   - dynamic table reading
   - and production/grammer as well.
+  - Shift Operation with terminals and non terminals.
+  - Reduce Operation with terminals and non terminals.
+  - accept and failure Operations.
